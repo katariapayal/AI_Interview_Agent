@@ -1,0 +1,21 @@
+{
+  "name": "abtalks-interview-agent",
+  "version": "1.0.0",
+  "description": "AI Interview Agent for the ABTalks AI Cohort hackathon (Problem Statement 2).",
+  "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test:cli": "node test/cli-interview.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "uuid": "^14.0.1"
+  }
+}

@@ -1,0 +1,192 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --border: #2a2e39;
+  --text: #e8eaf0;
+  --muted: #9aa0ac;
+  --accent: #6c8cff;
+  --interviewer: #1e2330;
+  --candidate: #2b3a2f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.picker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.picker label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+select, textarea, button {
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+select {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #10131a;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hidden { display: none; }
+
+.chat-section {
+  margin-top: 20px;
+}
+
+.chat-log {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bubble {
+  max-width: 85%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.bubble.interviewer {
+  align-self: flex-start;
+  background: var(--interviewer);
+  border: 1px solid var(--border);
+}
+
+.bubble.candidate {
+  align-self: flex-end;
+  background: var(--candidate);
+  border: 1px solid var(--border);
+}
+
+.bubble .role-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.chat-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chat-form textarea {
+  flex: 1;
+  resize: vertical;
+  padding: 10px;
+  border-radius: 8px;
+  background: #10131a;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.feedback-section {
+  margin-top: 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.fb-summary {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.fb-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+@media (min-width: 560px) {
+  .fb-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.fb-columns h3 {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.fb-columns ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+#restartBtn {
+  margin-top: 16px;
+}
+
+.typing {
+  color: var(--muted);
+  font-style: italic;
+}

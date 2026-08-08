@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ABTalks Interview Agent</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>ABTalks AI Cohort — Interview Agent</h1>
+      <p class="subtitle">Pick a candidate to start a live, adaptive technical interview.</p>
+    </header>
+
+    <section id="picker" class="picker">
+      <label for="candidateSelect">Candidate</label>
+      <select id="candidateSelect"></select>
+      <button id="startBtn">Start Interview</button>
+    </section>
+
+    <section id="chatSection" class="chat-section hidden">
+      <div id="chatLog" class="chat-log"></div>
+
+      <form id="chatForm" class="chat-form">
+        <textarea id="chatInput" placeholder="Type your answer..." rows="2"></textarea>
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+    </section>
+
+    <section id="feedbackSection" class="feedback-section hidden">
+      <h2>Interview Feedback</h2>
+      <p id="fbSummary" class="fb-summary"></p>
+      <div class="fb-columns">
+        <div>
+          <h3>Strengths</h3>
+          <ul id="fbStrengths"></ul>
+        </div>
+        <div>
+          <h3>Gaps</h3>
+          <ul id="fbGaps"></ul>
+        </div>
+        <div>
+          <h3>Next Steps</h3>
+          <ul id="fbNext"></ul>
+        </div>
+      </div>
+      <button id="restartBtn">Start Another Interview</button>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
